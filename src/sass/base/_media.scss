@@ -29,19 +29,28 @@
             margin-top: 10px;
         }
 
-        .consultation {
-            min-width: 650px;
-            padding: 70px 0 62px 30px;
-        }
-        
-        .consultation__header {
-            font-size: 33px;
-        }
+    .consultation {
+        min-width: 650px;
+        padding: 70px 0 62px 30px;
+    }
+    
+    .consultation__header {
+        font-size: 33px;
+    }
 
-        .consultation__descr {
-            margin-top: 65px;
+    .consultation__descr {
+        margin-top: 65px;
+    }
+    .carousel {
+        padding: 50px 0;
+    }
+    .carousel__inner {
+        img {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
         }
-
+    }
 }
 
 @media ( max-width: 767px ) {
@@ -79,6 +88,7 @@
     }
 
     .consultation {
+        min-width: 100%;
         min-height: 500px;
         padding: 40px 0 32px 30px;
     }
@@ -91,6 +101,10 @@
         margin-top: 50px;
         font-size: 17px;
     }
+    .carousel {
+        padding: 45px 0;
+    }
+
 }
 
 @media (max-width: 575px) {
@@ -117,8 +131,19 @@
         margin-top: 5px;
     }
 
+    .consultation {
+        min-width: 100%;
+    }
+
     .consultation__header {
         font-size: 24px;
+    }
+    .carousel {
+        &__inner {
+            .slick-next, .slick-prev {
+                width: 20%;
+            }
+        }
     }
 }
 
@@ -173,5 +198,15 @@
 
     .consultation .feed-form {
         width: 100%;
+    }
+    .carousel {
+        padding: 30px 0;
+        &__inner {
+            .slick-next, .slick-prev {
+                img {
+                    display: none;
+                }
+            }
+        }
     }
 }
