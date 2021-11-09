@@ -5,6 +5,8 @@
     height: 440px;
     border: 2px solid #e8e8e8;
     background-color: #ffffff;
+    overflow: hidden;
+    margin-bottom: 20px;
     &__img {
         display: block;
         margin: 0 auto;
@@ -36,11 +38,82 @@
         font-weight: 500;
         text-align: center;
         line-height: 15px;
+        transition: 0.5s all;
+        text-transform: uppercase;
         &:hover {
             color: $main-color;
             text-decoration-style: double;
         }
     }
+    &__back {
+        position: absolute;
+        bottom: -19px;
+        right: 50%;
+        transform: translateX(calc(50% + -10px));
+        color: $main-color;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 15px;
+        transition: 0.5s all;
+        &:hover {
+            color: $main-color;
+            text-decoration-style: double;
+        }
+    }
+    
+    &__wrapper {
+        display: flex;
+        width: calc(200% + 40px);
+    }
+    &__content {
+        width: 50%;
+        padding-right: 20px;
+        transform: translateX(-100%);
+        transition: 0.5s all;
+        &_active {
+            transform: translateX(0%);
+            margin-right: 20px;
+        }
+    }
+    
+    &__list {
+        position: relative;
+        width: 50%;
+        margin-left: 20px;
+        transform: translateX(0%);
+        padding-right: 20px;
+        transition: 0.5s all;
+        padding-left: 19px;
+        list-style-type: none;
+        &_active {
+            transform: translateX(-100%);
+            margin-left: 0;
+            }
+        li {
+            position: relative;
+            margin-bottom: 20px;
+            color: #555555;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 14px;
+            text-align: left;
+            &::before {
+                content: ' ';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background-color: $main-color;
+                left: -14px;
+                top: 4px;
+            }
+            
+        }
+    }
+        
+        
+
     &__divider {
         margin: 0 auto;
         margin-top: 20px;
@@ -48,14 +121,14 @@
         height: 1px;
         background-color: #e8e8e8;
     }
+
     &__footer {
         display: flex;
         justify-content: space-between;
     }
+
     &__price {
         margin-top: 15px;
-        // position: absolute;
-        // left: 21px;
         color: #050505;
         font-size: 20px;
         font-weight: 700;
@@ -71,9 +144,6 @@
 
     &__btn {
         margin-top: 21px;
-        // position: absolute;
-        // left: auto;
-        // right: 19px;
         width: 131px;
         height: 40px;
         border-radius: 5px;
