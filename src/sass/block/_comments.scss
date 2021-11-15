@@ -37,6 +37,9 @@
         color: #0d0d0d;
         font-size: 16px;
         font-weight: 300;
+        &_invisible {
+            display: none;
+        }
     }
     &__divider {
         margin-top: 50px;

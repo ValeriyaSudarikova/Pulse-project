@@ -1,4 +1,13 @@
 @media (max-width: 1200px) {
+    .comments{
+        .comments-item {
+            &__descr {
+                &_invisible {
+                    display: none;
+                }
+            }
+        }
+    }
 
 }
 
@@ -49,6 +58,15 @@
             width: 70%;
             display: block;
             margin: 0 auto;
+        }
+    }
+    .comments{
+        .comments-item {
+            &__descr {
+                &_invisible {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -118,9 +136,57 @@
         justify-content: space-evenly;
     }
     .catalog {
-        padding-bottom: 50px;
+        padding-bottom: 0px;
     }
-
+    .comments {
+        .comments__title {
+            font-size: 25px;
+        }
+        .comments-item__divider {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+        .comments-item {
+            margin-top: 35px;
+            .comments-item__info {
+                margin-left: 30px;
+            }
+            &__name {
+                font-size: 16px;
+            }
+            &__descr {
+                font-size: 15px;
+                &_invisible {
+                    display: none;
+                }
+            }
+        }
+    }
+    .footer {
+        min-height:auto;
+        iframe {
+            height: 350px;
+        }
+        &__info {
+            width: 400px;
+            height: 250px;
+        }
+        &__address {
+            font-size: 18px;
+            line-height: 18px;
+        }
+        &__phone {
+            font-size: 18px;
+            line-height: 18px;
+        }
+        &__links {
+            &-item {
+                height: 45px;
+                width: 45px;
+            }
+        }
+    }
 }
 
 @media (max-width: 575px) {
@@ -167,8 +233,7 @@
                 }
             }
         }
-    }
-    
+    }  
 
     .catalog__tabs{
         margin-top: 35px;
@@ -227,6 +292,47 @@
     }
     .catalog {
         padding-bottom: 50px;
+    }
+    
+    .comments {
+        padding-bottom: 0px;
+        .comments__title {
+            font-size: 22px;
+        }
+        .comments-item__divider {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 25px;
+        }
+        .comments-item {
+            margin-top: 35px;
+            .comments-item__info {
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+            &__name {
+                font-size: 15px;
+            }
+            &__number {
+                margin-top: 5px;
+                font-size: 13px;
+            }
+            &__descr {
+                font-size: 14px;
+                &_invisible {
+                    display: none;
+                }
+            }
+            &__img {
+                width: 25%;
+            }
+        }
+    }
+    .footer {
+        min-height:auto;
+        iframe {
+            height: 350px;
+        }
     }
 }
 
@@ -304,6 +410,51 @@
         line-height: 14px;
         &:nth-child(2) {
             padding-top: 10px;
+        }
+    }
+    
+    .comments{
+        .comments-item {
+            justify-content: flex-start;
+            align-items: center;
+            &__img {
+                width: 20%;
+            }
+            &__descr {
+                display: none;
+                &_invisible {
+                    display: block;
+                    margin: 0 auto;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .footer {
+        &__info {
+            height: 225px;
+        }
+        iframe {
+            display: none;
+        }
+        &__address {
+            margin-top: 35px;
+            padding-left: 35px;
+        }
+        &__phone {
+            margin-top: 25px;
+            padding-left: 35px;
+        }
+        &__links {
+            padding-left: 35px;
+            &-item {
+                height: 40px;
+                width: 40px;
+                margin-right: 20px;
+                img {
+                    height: 22px;
+                }
+            }
         }
     }
 }
