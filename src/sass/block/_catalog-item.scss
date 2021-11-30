@@ -47,7 +47,7 @@
     }
     &__back {
         position: absolute;
-        bottom: -19px;
+        bottom: 0px;
         right: 50%;
         transform: translateX(calc(50% + -10px));
         color: $main-color;

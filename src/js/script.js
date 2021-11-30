@@ -103,7 +103,7 @@ $(document).ready(function(){
     // smooth scroll and page up
 
     $(window).scroll(function() {
-        if ($(this).scrollTop()>1300) {
+        if ($(this).scrollTop() > 1300) {
             $('.pageup').fadeIn();
         } else {
             $('.pageup').fadeOut();
@@ -118,9 +118,11 @@ $(document).ready(function(){
         }
     });
 
-    $("a[href^='#']").click(function(){
+    $("a[href=#up]").click(function(){
         const _href = $(this).attr("href");
         $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
         return false;
     });
+
+    new WOW().init();
 });
