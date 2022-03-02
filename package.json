@@ -13,12 +13,14 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
-    "gulp-cli": "^1.4.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
-    "sass": "^1.43.4"
+    "sass": "^1.44.0"
   },
   "dependencies": {
+    "gulp-imagemin": "^8.0.0",
     "urix": "^0.1.0"
   }
 }
